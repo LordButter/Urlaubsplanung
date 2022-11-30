@@ -4,10 +4,12 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron src/index.js",
     "build": "npx tailwindcss -i ./src/styles/src/input.css -o ./src/styles/dist/output.css",
-    "watch": "concurrently --kill-others \"electron src/index.js\" \"npx tailwindcss -i ./src/styles/src/input.css -o ./src/styles/dist/output.css --watch\""
+    "watch": "npx tailwindcss -i ./src/styles/src/input.css -o ./src/styles/dist/output.css --watch",
+    "pb-serve": ".\\pocketbase\\pocketbase.exe serve",
+    "run": "concurrently --kill-others \"npm:build\" \"npm:pb-serve\" \"npm:start\"",
+    "run-watch": "concurrently --kill-others \"npm:pb-serve\" \"npm:start\" \"npm:watch\""
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,9 @@
     "concurrently": "^7.6.0",
     "electron": "^21.2.2",
     "tailwindcss": "^3.2.4"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "pocketbase": "^0.8.1"
   }
 }

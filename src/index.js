@@ -11,7 +11,7 @@ const createWindow = () => {
         }
     });
 
-    win.loadFile('index.html');
+    win.loadFile('login.html');
 }
 
 app.commandLine.appendSwitch('no-sandbox');
@@ -23,3 +23,7 @@ app.whenReady().then(() => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow();
     })
 });
+
+app.on('window-all-closed', () => {
+    if (process.platform !== 'darwin') app.quit()
+})
