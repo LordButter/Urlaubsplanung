@@ -6,6 +6,7 @@ const createWindow = () => {
         autoHideMenuBar: true,
         width: 1200,
         height: 800,
+		icon:  path.join(__dirname, '/assets/schichtkalender.ico'),
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
         }
