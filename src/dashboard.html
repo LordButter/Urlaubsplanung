@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/dist/output.css">
+  </head>
+  <body>
+    <div class="flex flex-row bg-custom-grey-normal">
+      <div class="hidden md:w-1/4 md:flex md:flex-wrap bg-custom-grey-light">
+        <div class="w-full flex justify-center" id="Logo">
+          <img src="assets/schichtkalender.svg" width="160" height="160" alt="" class="text-center">
+        </div>
+        <ul class="w-full">
+          <li class="text-center py-3"><a class="text-white" href="#">Urlaubsanträge</a></li>
+          <li class="text-center border-2 border-white py-3"><a class="text-white" href="#">Anzeigen</a></li>
+          <li class="text-center border-2 py-3"><a class="text-white" href="#">Erstellen</a></li>
+          <li class="text-center border-2 py-3"><a class="text-white" href="#">Abwesenheitsplan</a></li>
+        </ul>
+        <button type="submit" class="w-full text-white bg-custom-red-normal hover:bg-custom-red-light focus:ring-4 focus:outline-none focus:ring-custom-red-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center">Logout</button>
+      </div>
+      <div class="w-full md:w-3/4 bg-red-500">
+        <div class="flex flex-row border-2 border-white p-2" id="dashboard">
+          <div class="w-2/12">
+            <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block bg-gray-800 rounded p-2 hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="text-center self-center w-10/12">
+            <span class="text-white ">Dashboard</span>
+          </div>
+        </div>
+        <div class="flex flex-row" id="information">
+          <div class="w-1/2">chart</div>
+          <div class="w-1/2">shortInfo</div>
+        </div>
+        <div class="flex flex-col border-2 border-white m-2 bg-custom-grey-light" id="holliday">
+          <div class="grid grid-cols-4 w-full">
+            <div class="status-Icon self-center w-1/4">
+              <img src="assets/check-solid.svg" width="160" height="160" alt="" class="text-center">
+            </div>
+            <div class="status-Icon col-span-2 w-1/2">
+              <span>Urlaubstyp: Urlaub</span><br>
+              <span>Urlaubstyp: Urlaub</span>
+            </div>
+            <div class="status-Icon w-1/4 justify-center self-center">
+              <img src="assets/eye-solid.svg" width="160" height="160" alt="" class="text-center">
+            </div>
+          </div>
+          <div class="grid grid-cols-4 w-full">
+            <div class="status-Icon self-center w-1/4">
+              <img src="assets/check-solid.svg" width="160" height="160" alt="" class="text-center">
+            </div>
+            <div class="status-Icon col-span-2 w-1/2">
+              <span>Urlaubstyp: Urlaub</span><br>
+              <span>Urlaubstyp: Urlaub</span>
+            </div>
+            <div class="status-Icon w-1/4 justify-center self-center">
+              <img src="assets/eye-solid.svg" width="160" height="160" alt="" class="text-center">
+            </div>
+          </div>
+          <div class="grid grid-cols-4 w-full">
+            <div class="status-Icon self-center w-1/4">
+              <img src="assets/check-solid.svg" width="160" height="160" alt="" class="text-center">
+            </div>
+            <div class="status-Icon col-span-2 w-1/2">
+              <span>Urlaubstyp: Urlaub</span><br>
+              <span>Urlaubstyp: Urlaub</span>
+            </div>
+            <div class="status-Icon w-1/4 justify-center self-center">
+              <img src="assets/eye-solid.svg" width="160" height="160" alt="" class="text-center">
+            </div>
+          </div>
+          <div class="grid grid-cols-4 w-full">
+            <div class="status-Icon self-center w-1/4">
+              <img src="assets/check-solid.svg" width="160" height="160" alt="" class="text-center">
+            </div>
+            <div class="status-Icon col-span-2 w-1/2">
+              <span>Urlaubstyp: Urlaub</span><br>
+              <span>Urlaubstyp: Urlaub</span>
+            </div>
+            <div class="status-Icon w-1/4 justify-center self-center">
+              <img src="assets/eye-solid.svg" width="160" height="160" alt="" class="text-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
