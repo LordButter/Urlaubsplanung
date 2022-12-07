@@ -20,7 +20,7 @@
           <li class="text-center border-2 py-3"><a class="text-white" href="#">Erstellen</a></li>
           <li class="text-center border-2 py-3"><a class="text-white" href="#">Abwesenheitsplan</a></li>
         </ul>
-        <button type="submit" class="w-full text-white bg-custom-red-normal hover:bg-custom-red-light focus:ring-4 focus:outline-none focus:ring-custom-red-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center">Logout</button>
+        <button type="submit" class=" m-4 w-full text-white bg-custom-red-normal hover:bg-custom-red-light focus:ring-4 focus:outline-none focus:ring-custom-red-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center">Logout</button>
       </div>
       <div class="w-full md:w-3/4 bg-red-500">
         <div class="flex flex-row border-2 border-white p-2" id="dashboard">
@@ -36,11 +36,17 @@
           </div>
         </div>
         <div class="flex flex-row" id="information">
-          <div class="w-1/2">chart</div>
-          <div class="w-1/2">shortInfo</div>
+          <div class="w-1/2 m-4 border-2 border-white">
+            <img src="assets/chart.svg" width="160" height="160" alt="" class="text-center w-full">
+          </div>
+          <div class="w-1/2 text-white border-2 m-4 border-white">
+            <div>Freie Urlaubstage: 10</div>
+            <div>Verplante Urlaubstage: 0</div>
+            <div>Gesammte Urlaubstage: 10</div>
+          </div>
         </div>
-        <div class="flex flex-col border-2 border-white m-2 bg-custom-grey-light" id="holliday">
-          <div class="grid grid-cols-4 w-full">
+        <div class="flex flex-col border-2 border-white m-4 bg-custom-grey-light" id="holliday">
+          <div class="grid grid-cols-4 w-full border-2 mt-4 bg-white border-black">
             <div class="status-Icon self-center w-1/4">
               <img src="assets/check-solid.svg" width="160" height="160" alt="" class="text-center">
             </div>
@@ -52,7 +58,7 @@
               <img src="assets/eye-solid.svg" width="160" height="160" alt="" class="text-center">
             </div>
           </div>
-          <div class="grid grid-cols-4 w-full">
+          <div class="grid grid-cols-4 w-full border-2 mt-4 bg-white border-black">
             <div class="status-Icon self-center w-1/4">
               <img src="assets/check-solid.svg" width="160" height="160" alt="" class="text-center">
             </div>
@@ -64,7 +70,7 @@
               <img src="assets/eye-solid.svg" width="160" height="160" alt="" class="text-center">
             </div>
           </div>
-          <div class="grid grid-cols-4 w-full">
+          <div class="grid grid-cols-4 w-full border-2 mt-4 bg-white border-black">
             <div class="status-Icon self-center w-1/4">
               <img src="assets/check-solid.svg" width="160" height="160" alt="" class="text-center">
             </div>
@@ -76,7 +82,7 @@
               <img src="assets/eye-solid.svg" width="160" height="160" alt="" class="text-center">
             </div>
           </div>
-          <div class="grid grid-cols-4 w-full">
+          <div class="grid grid-cols-4 w-full border-2 mt-4 bg-white border-black">
             <div class="status-Icon self-center w-1/4">
               <img src="assets/check-solid.svg" width="160" height="160" alt="" class="text-center">
             </div>
@@ -91,5 +97,7 @@
         </div>
       </div>
     </div>
+    <script src="../node_modules/pocketbase/dist/pocketbase.umd.js"></script>
+    <script src="./scripts/userValidate.js"></script>
   </body>
 </html>
